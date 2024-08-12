@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwb11s7xdlvlk"]
+
+[ext_resource type="PackedScene" uid="uid://vlhdnbnqkul7" path="res://player.tscn" id="1_dgwgn"]
+[ext_resource type="Script" path="res://main.gd" id="1_ptkjh"]
+[ext_resource type="PackedScene" uid="uid://bpg7u3ry3qrw5" path="res://level.tscn" id="2_amyn1"]
+[ext_resource type="PackedScene" uid="uid://bql2ld1yq8a5g" path="res://ork.tscn" id="3_et3jf"]
+
+[node name="Main" type="Node2D"]
+scale = Vector2(5, 5)
+script = ExtResource("1_ptkjh")
+
+[node name="Level" parent="." instance=ExtResource("2_amyn1")]
+visibility_layer = 3
+scale = Vector2(1.4, 1.4)
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(-374.4, 246.4)
+
+[node name="Ork" parent="." instance=ExtResource("3_et3jf")]
+visible = false
+position = Vector2(-1016, 200)
+
+[node name="Player" parent="." instance=ExtResource("1_dgwgn")]
+visible = false
+position = Vector2(-1088, 400)
+
+[node name="EnemyPoint" type="Marker2D" parent="."]
+position = Vector2(-120, -48)

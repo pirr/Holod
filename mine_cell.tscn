@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgcio4rqyv66q"]
+
+[ext_resource type="Texture2D" uid="uid://bfx6d0y6tdwt6" path="res://brown-dirt-minecraft-pattern_PMNW.jpg" id="1_y4xmk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kqmd"]
+
+[node name="MineNode" type="Area2D"]
+
+[node name="MineSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("1_y4xmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2kqmd")
